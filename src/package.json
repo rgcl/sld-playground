@@ -1,0 +1,7 @@
+{
+    "directories": {},
+    "dependencies": {
+        "dojo": "1.9.0rc2",
+        "dijit": "1.9"
+    }
+}
