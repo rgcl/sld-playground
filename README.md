@@ -2,7 +2,7 @@
 
 A demonstration of the technological capabilities of SLD with Dojo Toolkit.
 
-# Instalattion
+# Installation
 
 # How to create build
 
