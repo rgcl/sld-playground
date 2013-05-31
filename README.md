@@ -2,6 +2,8 @@
 
 A demonstration of the technological capabilities of SLD with Dojo Toolkit.
 
+http://sapienlab.com/app/sld-playground/
+
 # Installation
 
 # How to create build
