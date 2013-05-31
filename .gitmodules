@@ -1,0 +1,18 @@
+[submodule "src/dojo"]
+	path = src/dojo
+	url = https://github.com/dojo/dojo.git
+[submodule "src/dijit"]
+	path = src/dijit
+	url = https://github.com/dojo/dijit.git
+[submodule "src/dojox"]
+	path = src/dojox
+	url = https://github.com/dojo/dojox.git
+[submodule "src/jsonpack"]
+	path = src/jsonpack
+	url = https://github.com/sapienlab/jsonpack.git
+[submodule "src/sld"]
+	path = src/sld
+	url = https://github.com/sapienlab/sld.git
+[submodule "src/lightDb"]
+	path = src/lightDb
+	url = https://github.com/sapienlab/lightDb.git
