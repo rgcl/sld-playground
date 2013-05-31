@@ -1,0 +1,425 @@
+{
+	"id": "layoutRoot",
+	"$type": "dijit/layout/BorderContainer",
+	"gutters": false,
+	"$children": [
+		{
+			"id": "appToolbar",
+			"$type": "dijit/layout/BorderContainer",
+			"region": "top",
+			"gutters": false,
+			"liveSplitters": false,
+			"$children": [
+				{
+					"$type": "dijit/Toolbar",
+					"region": "center",
+					"$children": [
+						{
+							"id": "APP_NAME",
+							"$type": "dijit/form/ComboButton",
+							"label": "APP_NAME",
+							"dropDown": {
+								"$type": "dijit/Menu",
+								"$children": [
+									{
+										"$type": "dijit/PopupMenuItem",
+										"label": "FILE",
+										"popup": {
+											"$type": "dijit/Menu",
+											"$children": [
+												{
+													"$type": "dijit/MenuItem",
+													"label": "NEW",
+													"iconClass": "dijitEditorIcon dijitEditorIconNewPage",
+													"cmd": "new"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "SAVE",
+													"cmd": "save",
+													"iconClass": "dijitEditorIcon dijitEditorIconSave"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "RENAME",
+													"disabled": true,
+													"title": "Not implemented, sorry",
+													"iconClass": "dijitEditorIcon dijitEditorIconWikiword"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "DELETE",
+													"iconClass": "dijitEditorIcon dijitEditorIconRemoveFormat",
+													"cmd": "rm"
+												}
+											]
+										}
+									}, {
+										"$type": "dijit/PopupMenuItem",
+										"label": "EDITOR",
+										"popup": {
+											"$type": "dijit/Menu",
+											"$children": [
+												{
+													"$type": "dijit/PopupMenuItem",
+													"label": "THEME",
+													"iconClass": "dijitEditorIcon dijitEditorIconForeColor",
+													"popup": {
+														"id": "themeEditorMenu",
+														"$type": "dijit/Menu",
+														"$children": [
+															{
+																"$type": "dijit/RadioMenuItem",
+																"label": "Ambiance",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/ambiance"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Chaos",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/chaos"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Chrome",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/chrome"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Clouds",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/clouds"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Clouds Midnight",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/clouds_midnight"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Cobalt",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/cobalt"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Crimson Editor",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/crimson_editor"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Dawn",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/dawn"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Dreamweaver",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/dreamweaver"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Eclipse",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/eclipse"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Github",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/github"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Idle Fingers",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/idle_fingers"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Kr Theme",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/kr_theme"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Merbivore",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/merbivore"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Merbivore Soft",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/merbivore_soft"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Mono Industrial",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/mono_industrial"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Monokai",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/monokai"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Pastel On Dark",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/pastel_on_dark"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Solarized Dark",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/solarized_dark"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Solarized Light",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/solarized_light"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Textmate",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/textmate"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Tomorrow",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/tomorrow"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Tomorrow Night",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/tomorrow_night"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Tomorrow Night Blue",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/tomorrow_night_blue"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Tomorrow Night Bright",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/tomorrow_night_bright"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Tomorrow Night Eighties",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/tomorrow_night_eighties"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Twilight",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/twilight"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Vibrant Ink",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/vibrant_ink"
+															}, {
+																"$type": "dijit/RadioMenuItem",
+																"label": "Xcode",
+																"group": "theme",
+																"cmd": "theme editor ace/theme/xcode"
+															}
+														]
+													}
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "FORMAT",
+													"cmd": "format"
+												}
+											]
+										}
+									}, {
+										"$type": "dijit/PopupMenuItem",
+										"label": "SIMULATOR",
+										"popup": {
+											"$type": "dijit/Menu",
+											"$children": [
+												{
+													"id": "automaticRenderCheckedMenuItem",
+													"$type": "dijit/CheckedMenuItem",
+													"label": "AUTOMATIC_RENDER",
+													"iconClass": "dijitIconUndo",
+													"cmd": "automaticRender"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "RENDER",
+													"iconClass": "dijitIconUndo",
+													"cmd": "render"
+												}
+											]
+										}
+									}, {
+										"$type": "dijit/MenuSeparator"
+									}, {
+										"$type": "dijit/MenuItem",
+										"label": "ABOUT",
+										"iconClass": "dijitIconSample"
+									}
+								]
+							}
+						}, {
+							"$type": "dijit/ToolbarSeparator"
+						}, {
+							"$type": "dijit/form/Button",
+							"label": "NEW",
+							"showLabel": false,
+							"iconClass": "dijitEditorIcon dijitEditorIconNewPage",
+							"cmd": "new"
+						}, {
+							"$type": "dijit/form/Button",
+							"label": "SAVE",
+							"cmd": "save",
+							"showLabel": false,
+							"iconClass": "dijitEditorIcon dijitEditorIconSave"
+						}, {
+							"id": "renderThemeSetterButton",
+							"$type": ["dijit/form/DropDownButton", "app/widget/render/OnThemeSetter"],
+							"iconClass": "dijitIcon appIcon desktopApp",
+							"label": "Claro",
+							"dropDown": {
+								"$type": "dijit/Menu",
+								"$children": [
+									{
+										"$type": "dijit/PopupMenuItem",
+										"iconClass": "dijitIcon appIcon desktopApp",
+										"label": "DESKTOP",
+										"popup": {
+											"$type": "dijit/Menu",
+											"$children": [
+												{
+													"$type": "dijit/MenuItem",
+													"label": "Claro",
+													"cmd": "theme render desktop-claro"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Tundra",
+													"cmd": "theme render desktop-tundra"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Soria",
+													"cmd": "theme render desktop-soria"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Nihilo",
+													"cmd": "theme render desktop-nihilo"
+												}
+											]
+										}
+									}, {
+										"$type": "dijit/PopupMenuItem",
+										"iconClass": "dijitIcon appIcon mobileApp",
+										"label": "MOBILE",
+										"popup": {
+											"$type": "dijit/Menu",
+											"$children": [
+												{
+													"$type": "dijit/MenuItem",
+													"label": "Android",
+													"cmd": "theme render mobile-Android"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Blackberry",
+													"cmd": "theme render mobile-BlackBerry"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "iPhone",
+													"cmd": "theme render mobile-iPhone"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "iPad",
+													"cmd": "theme render mobile-iPad"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Windows Phone",
+													"cmd": "theme render mobile-WindowsPhone"
+												}, {
+													"$type": "dijit/MenuItem",
+													"label": "Custom",
+													"cmd": "theme render mobile-Custom"
+												}
+											]
+										}
+									}
+								]
+							}
+						}, {
+							"$type": "dijit/ToolbarSeparator"
+						}, {
+							"id": "renderButton",
+							"$type": "dijit/form/Button",
+							"label": "RENDER",
+							"iconClass": "dijitIconUndo",
+							"cmd": "render"
+						}, {
+							"$type" : "dijit/form/Button",
+							"label" : "button1",
+							"style" : {
+								"float" : "right"
+							}
+						}, {
+							"$type" : "dijit/form/Button",
+							"label" : "button2",
+							"style" : {
+								"float" : "right"
+							}
+						}
+					]
+				}, {
+					"$type": "dijit/Toolbar",
+					"region": "trailing",
+					"$children": [
+						{
+							"$type": "dijit/form/DropDownButton",
+							"label": "SHARE_LINK",
+							"iconClass": "dijitEditorIcon dijitEditorIconCreateLink"
+						}, {
+							"id": "localeButton",
+							"$type": "dijit/form/DropDownButton",
+							"label": "en",
+							"dropDown": {
+								"$type": "dijit/Menu",
+								"$children": [
+									{
+										"$type": "dijit/MenuItem",
+										"label": "(ar) العربية",
+										"cmd": "locale ar"
+									}, {
+										"$type": "dijit/MenuItem",
+										"label": "(io) Ido",
+										"cmd": "locale io"
+									}, {
+										"$type": "dijit/MenuItem",
+										"label": "(en) English",
+										"cmd": "locale en"
+									}, {
+										"$type": "dijit/MenuItem",
+										"label": "(es) Español",
+										"cmd": "locale es"
+									}
+								]
+							}
+						} , {
+							"$type" : "dijit/ToolbarSeparator"
+						}
+					]
+				}
+			]
+		}, {
+			"$type": "dijit/layout/BorderContainer",
+			"region": "center",
+			"liveSplitters": true,
+			"$children": [
+				{
+					"id": "renderPane",
+					"class": "perspectivePane",
+					"$type": "app/widget/render/Pane",
+					"region": "center",
+					"splitter": true
+				}, {
+					"id": "editorContainer",
+					"class": "perspectivePane",
+					"splitter": true,
+					"$type": "app/widget/editor/Container",
+					"region": "leading",
+					"tabPosition": "bottom",
+					"tabStrip": true,
+					"style": {
+						"width": "45%"
+					}
+				}
+			]
+		}
+	]
+}

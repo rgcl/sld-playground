@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>SLD Tool</title>
+		<link rel="stylesheet" href="../../../dijit/themes/claro/claro.css" media="screen">
+		<link rel="stylesheet" href="../../../dijit/themes/tundra/tundra.css" media="screen">
+		<link rel="stylesheet" href="../../../dijit/themes/soria/soria.css" media="screen">
+		<link rel="stylesheet" href="../../../dijit/themes/nihilo/nihilo.css" media="screen">
+		<style>
+			html, body, body .dijitContainer:first-child {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			html, body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				font-family: sans-serif;
+				font-size: 11px;
+			}
+		</style>
+		<script src="../../../dojo/dojo.js" data-dojo-config="async: 1"></script>
+		<script>
+			require(['require', 'app/widget/render/updateLayout', 'dojo/dom-construct', 'dojo/domReady!'], function(require, updateLayout, domConstruct) {
+
+				document.body.className = location.href.split('?theme=')[1] || 'claro';
+
+				window.showError = function(e) {
+					var stack = e.stack || '';
+					stack = stack.replace(/\n/g, '</li><li>');
+					domConstruct.create('p', {
+						innerHTML : new Date().toLocaleTimeString() + ' - ' + e.toString() + '<ol><li>' + stack + '</li></ol>'
+					}, document.body);
+				};
+
+				window.iframeLoad = function(file) {
+					console.log('iframe::iframeLoad', file);
+					updateLayout(file.sld, document.body, window.showError);
+				};
+
+				require.on('error', window.showError);
+				window.onerror = window.showError;
+
+				window.top.require(['dijit/registry'], function(registry) {
+					var renderPane = registry.byId('renderPane');
+					renderPane.set('iframeLoaded', true);
+					window.iframeLoad(renderPane.get('file'));
+				});
+
+			});
+		</script>
+	</head>
+	<body></body>
+</html>

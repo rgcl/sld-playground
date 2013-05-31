@@ -1,0 +1,20 @@
+define({
+	APP_NAME : 'SLD Demo',
+	FILE : 'Dosiero',
+	NEW : 'Nova',
+	SAVE : 'Salvar',
+	RENAME : 'Rinomar',
+	FEATURED_NOT_IMPLEMENTED : 'Ups! Ita selekto ne esas developata',
+	DELETE : 'Efacar',
+	AUTOMATIC_RENDER : 'Automate Formacar',
+	RENDER : 'Ri-formarcar',
+	ABOUT : 'Pri me...',
+	DESKTOP : 'Desktop',
+	MOBILE : 'Posh Telefonilo',
+	THEME : 'Temo',
+	EDITOR : 'Redaktilo',
+	SIMULATOR : 'Simulator',
+	FORMAT : 'Formatar',
+	ARE_YOU_SURE_TO_REBOOT : 'Ka rikomencar nune?',
+	SHARE_LINK : 'Partigez!'
+});

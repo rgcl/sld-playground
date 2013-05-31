@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" >
+		<meta name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>SLD Showcase - Mobile</title>
+		<script src="../../../dojo/dojo.js" data-dojo-config="async: 1"></script>
+	</head>
+	<body>
+		<script>
+			require(['require', 'dojox/mobile', 'dojox/mobile/deviceTheme', 'dojox/mobile/compat', 'dojo/domReady!'], function(require) {
+				require(['dojo/dom-construct', 'app/widget/render/updateLayout'], function(domConstruct, updateLayout) {
+					console.log('hi from mobile');
+					window.showError = function(e) {
+						var stack = e.stack || '';
+						stack = stack.replace(/\n/g, '</li><li>');
+						domConstruct.create('p', {
+							innerHTML : new Date().toLocaleTimeString() + ' - ' + e.toString() + '<ol>' + stack + '</ol>'
+						}, document.body);
+					};
+
+					require.on('error', window.showError);
+					window.onerror = window.showError;
+
+					window.iframeLoad = function(file) {
+						console.log('received the file ', file, 'sld', file.sld);
+						updateLayout(file.sld, document.body, window.showError);
+					};
+
+					window.top.require(['dijit/registry'], function(registry) {
+						var renderPane = registry.byId('renderPane');
+						renderPane.set('iframeLoaded', true);
+						window.iframeLoad(renderPane.get('file'));						
+					});
+
+				});
+
+			});
+		</script>
+	</body>
+</html>
