@@ -2,7 +2,7 @@
 
 A demonstration of the technological capabilities of SLD with Dojo Toolkit.
 
-http://sapienlab.com/app/sld-playground/
+http://www.sapienlab.com/_old/app/sld-playground/index.html
 
 # Installation
 
