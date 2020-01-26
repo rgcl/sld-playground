@@ -2,13 +2,19 @@
 
 A demonstration of the technological capabilities of SLD with Dojo Toolkit.
 
-http://www.sapienlab.com/_old/app/sld-playground/index.html
+https://sld-playground.firebaseapp.com/
 
 # Installation
 
-# How to create build
+1] Clone
+
+`$ git clone --recursive https://github.com/rgcl/sld-playground.git`
+
+2] The ./build is not working :c, but you can use the raw src (is the same, only take more time to load) folder
+as a public folder.
 
 # License
+MIT LICENSE
 
 ## sld-playground
 MIT LICENSE
