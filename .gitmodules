@@ -16,3 +16,6 @@
 [submodule "src/lightDb"]
 	path = src/lightDb
 	url = https://github.com/sapienlab/lightDb.git
+[submodule "src/util"]
+	path = src/util
+	url = https://github.com/dojo/util.git
